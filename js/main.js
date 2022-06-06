@@ -2,7 +2,7 @@ $(document).ready(function() {
     function loadData() {
         return new Promise((resolve, reject) => {
           setTimeout(resolve, 2000);
-        })
+        });z
     }
     loadData()
         .then(() => {
@@ -17,16 +17,6 @@ $(document).ready(function() {
         sectionsColor: ["#fff", "#fff"],
         verticalCentered: false,
     });
-    // function firstScreenAnim() {
-    //     return new Promise((resolve, reject) => {
-    //       setTimeout(resolve, 2000);
-    //     })
-    // }
-    // firstScreenAnim()
-    //     .then(() => {
-    //       let El = document.getElementById('nav-first');
-    //       El.classList.add('animate');
-    // });
 });
 
 $('.matryoshka-big path').on('mouseenter', function() {
@@ -215,6 +205,7 @@ $('.tab-buttons__item-1').on('click', function() {
     $('.map-table-1').addClass('table-act');
     $('.single-table__item').removeClass('active');
     $('.single-table__item:nth-child(1)').addClass('active');
+    $('.section').removeClass('onlyoneanim');
 });
 
 $('.tab-buttons__item-2').on('click', function() {
@@ -226,6 +217,7 @@ $('.tab-buttons__item-2').on('click', function() {
     $('.map-table-2').addClass('table-act');
     $('.single-table__item').removeClass('active');
     $('.single-table__item:nth-child(2)').addClass('active');
+    $('.section').removeClass('onlyoneanim');
 });
 
 $('.tab-buttons__item-3').on('click', function() {
@@ -237,6 +229,7 @@ $('.tab-buttons__item-3').on('click', function() {
     $('.map-table-3').addClass('table-act');
     $('.single-table__item').removeClass('active');
     $('.single-table__item:nth-child(3)').addClass('active');
+    $('.section').removeClass('onlyoneanim');
 });
 
 $('.tab-buttons__item-4').on('click', function() {
@@ -248,4 +241,14 @@ $('.tab-buttons__item-4').on('click', function() {
     $('.map-table-4').addClass('table-act');
     $('.single-table__item').removeClass('active');
     $('.single-table__item:nth-child(4)').addClass('active');
+    $('.section').removeClass('onlyoneanim');
 });
+
+// setInterval(function() { 
+//     if($('.section').classList.contains('active')) { 
+//         setTimeout(function(){ 
+//             $('.section').removeClass('onlyoneanim');
+//             console.log('1')
+//         }, 5000); 
+//     } 
+// }, 1000);
