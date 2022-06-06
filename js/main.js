@@ -15,7 +15,7 @@ $(document).ready(function() {
     $('#scroll').pagepiling({
         navigation: null,
         sectionsColor: ["#fff", "#fff"],
-        verticalCentered: false
+        verticalCentered: false,
     });
     // function firstScreenAnim() {
     //     return new Promise((resolve, reject) => {
